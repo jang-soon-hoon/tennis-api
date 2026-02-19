@@ -12,7 +12,7 @@ import (
 
 func GetPlayers(c *gin.Context) {
 	ctx := context.Background()
-	var matches []map[string]interface{}
+	var players []map[string]interface{}
 
 	// Firestore "matches" 컬렉션 데이터 조회
 	iter := database.Client.Collection("matches").Documents(ctx)
@@ -31,8 +31,8 @@ func GetPlayers(c *gin.Context) {
 		data := doc.Data()
 		log.Print(data)
 		data["id"] = doc.Ref.ID // 문서 고유 ID 포함
-		matches = append(matches, data)
+		players = append(players, data)
 	}
 
-	c.JSON(http.StatusOK, matches)
+	c.JSON(http.StatusOK, players)
 }
