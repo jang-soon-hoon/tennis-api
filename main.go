@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	firestore "cloud.google.com/go/firestore/apiv1"
+	firestore "cloud.google.com/go/firestore"
 	firebase "firebase.google.com/go/v4"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
