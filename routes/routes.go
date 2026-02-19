@@ -12,5 +12,8 @@ func SetupRoutes(r *gin.Engine) {
 	{
 		// Matches route
 		api.GET("/matches", controllers.GetMatches)
+
+		// Matches route
+		api.GET("/players", controllers.GetPlayers)
 	}
 }
