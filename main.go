@@ -15,7 +15,7 @@ func main() {
 		AllowCredentials: true,
 	}))
 
-	r.GET("/", func(c *gin.Context) {
+	r.GET("/matches", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "Hello World",
 		})
