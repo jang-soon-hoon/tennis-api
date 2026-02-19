@@ -9,7 +9,7 @@ func main() {
 	r := gin.Default()
 
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"https://tennis-47e2b.web.app", "localhot:3000"},
+		AllowOrigins:     []string{"https://tennis-47e2b.web.app", "localhot:5173"},
 		AllowMethods:     []string{"GET", "POST", "PUT", "PATCH", "DELETE"},
 		AllowHeders:      []string{"Origin", "Content-Type", "Authorization"},
 		AllowCredentials: true,
