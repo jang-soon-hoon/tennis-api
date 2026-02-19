@@ -1,6 +1,8 @@
 package main
 
 import (
+	"tennis-api/routes"
+
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
@@ -20,11 +22,13 @@ func main() {
 	r.Use(cors.New(config))
 	// --- [CORS 설정 끝] ---
 
-	r.GET("/matches", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "Hello World",
-		})
-	})
+	routes.SetupRoutes(r)
+
+	// r.GET("/matches", func(c *gin.Context) {
+	// 	c.JSON(200, gin.H{
+	// 		"message": "Hello World",
+	// 	})
+	// })
 
 	r.Run()
 }

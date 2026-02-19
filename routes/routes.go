@@ -7,6 +7,10 @@ import (
 )
 
 func SetupRoutes(r *gin.Engine) {
-	// Matches route
-	r.GET("/matches", controllers.GetMatches)
+
+	api := r.Group("/api")
+	{
+		// Matches route
+		api.GET("/matches", controllers.GetMatches)
+	}
 }
