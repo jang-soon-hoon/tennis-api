@@ -9,11 +9,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${workspaceFolder}",
-            "env": {
-                "FIREBASE_CONFIG_JSON": "./service-account-key.json",
-                "PORT": "8080"
-            }
+            "program": "${workspaceFolder}"
         }
     ]
 }
