@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"context"
+	"log"
 	"net/http"
 	"tennis-api/database"
 
@@ -28,6 +29,7 @@ func GetMatches(c *gin.Context) {
 		}
 
 		data := doc.Data()
+		log.Print(data)
 		data["id"] = doc.Ref.ID // 문서 고유 ID 포함
 		matches = append(matches, data)
 	}
